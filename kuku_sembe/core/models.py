@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
 from django.utils.translation import gettext_lazy as _
 import uuid
-from  django.contq  arib.auth.models import AbstractBaseUser, PermissionsMixin
+from  django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils import timezone
 from datetime import timezone
@@ -173,4 +173,4 @@ class PaymentMethodFieldConfigSerializer(serializers.ModelSerializer):
         validation_message  = models.CharField(max_length=200, blank=True, null=True)
 
         class Meta:
-            unique_together = ('payment_method','field_name')
+        unique_together = ('payment_method','field_name')
